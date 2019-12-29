@@ -14,6 +14,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 public class Main {
+    // Example validation
     public static void main(String[] args) {
         InformationStructure is = new InformationStructureBuilder()
                 .addEntityTypes("A", "C", "D", "E")
