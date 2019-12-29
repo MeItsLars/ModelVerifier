@@ -70,29 +70,29 @@ public class PopulationBuilder {
     /**
      * Populates a label type
      * @param labelType The label type we want to populate
-     * @param value The values of the elements of this label type
+     * @param values The values of the elements of this label type
      * @return The builder
      */
-    public PopulationBuilder populateLabelType(String labelType, String... value) {
+    public PopulationBuilder populateLabelType(String labelType, String... values) {
         ah.assertExists(labelType);
         ah.assertInstanceOf(labelType, LabelType.class);
 
-        population.addLabelTypePopulation((LabelType) informationStructure.getObjectType(labelType), Arrays.asList(value));
+        population.addLabelTypePopulation((LabelType) informationStructure.getObjectType(labelType), Arrays.asList(values));
         return this;
     }
 
     /**
      * Populates a power type
      * @param powerType The power type we want to populate
-     * @param value The values of the elements of this power type
+     * @param values The values of the elements of this power type
      * @return The builder
      */
-    public PopulationBuilder populatePowerType(String powerType, Set<Set<String>> value) {
+    public PopulationBuilder populatePowerType(String powerType, List<Set<String>> values) {
         //TODO: New implementation; test!
         ah.assertExists(powerType);
         ah.assertInstanceOf(powerType, PowerType.class);
 
-        population.addPowerTypePopulation((PowerType) informationStructure.getObjectType(powerType), value);
+        population.addPowerTypePopulation((PowerType) informationStructure.getObjectType(powerType), values);
         return this;
     }
 

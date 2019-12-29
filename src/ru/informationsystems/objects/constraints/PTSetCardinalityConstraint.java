@@ -36,7 +36,7 @@ public class PTSetCardinalityConstraint implements Constraint {
     @Override
     public boolean validate(Population population) {
         // We retrieve the population that belongs to this power type
-        Set<Set<String>> powerTypePopulation = population.getPowerTypePopulation(powerType);
+        List<Set<String>> powerTypePopulation = population.getPowerTypePopulation(powerType);
 
         // We use streams, and we check how many times an element occurs in a set.
         // If it is less then the minimum amount, or more than the maximum amount, the population is invalid.

@@ -19,7 +19,7 @@ public class Population {
     // The populations of fact types
     private Map<FactType, List<Map<Predicator, String>>> factTypePopulations = new HashMap<>();
     // The populations of power types
-    private Map<PowerType, Set<Set<String>>> powerTypePopulations = new HashMap<>();
+    private Map<PowerType, List<Set<String>>> powerTypePopulations = new HashMap<>();
 
     /**
      * Retrieves the population of an entity type
@@ -53,7 +53,7 @@ public class Population {
      * @param powerType The power type we want to retrieve the population of
      * @return the population that belongs to this power type
      */
-    public Set<Set<String>> getPowerTypePopulation(PowerType powerType) {
+    public List<Set<String>> getPowerTypePopulation(PowerType powerType) {
         return powerTypePopulations.get(powerType);
     }
 
@@ -89,7 +89,7 @@ public class Population {
      * @param powerType The power type that the population belongs to
      * @param population The population of this power type
      */
-    public void addPowerTypePopulation(PowerType powerType, Set<Set<String>> population) {
+    public void addPowerTypePopulation(PowerType powerType, List<Set<String>> population) {
         powerTypePopulations.put(powerType, population);
     }
 }

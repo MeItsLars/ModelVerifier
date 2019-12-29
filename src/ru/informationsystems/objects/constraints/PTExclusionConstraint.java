@@ -30,7 +30,7 @@ public class PTExclusionConstraint implements Constraint {
     @Override
     public boolean validate(Population population) {
         // We retrieve the population that belongs to this power type
-        Set<Set<String>> powerTypePopulation = population.getPowerTypePopulation(powerType);
+        List<Set<String>> powerTypePopulation = population.getPowerTypePopulation(powerType);
         // We retrieve the population that belongs to the entity type
         List<String> entityTypePopulation = population.getEntityTypePopulation(powerType.getElement());
 
